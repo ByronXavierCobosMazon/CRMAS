@@ -80,14 +80,14 @@ const Register = () => {
             errRef.current.focus();
         }
     }
-
+    
     return (
-        <>                                                                                                                                                                                                                                                                                                                                                                           -  n 
+        <>
             {success ? (
                 <section>
-                    <h1>Success!</h1>
+                    <h1>¡Éxito!</h1>
                     <p>
-                        <a href="#">Iniciar sesión</a>
+                        <a href="#">Registrarse</a>
                     </p>
                 </section>
             ) : (
@@ -116,7 +116,7 @@ const Register = () => {
                         <p id="uidnote" className={userFocus && user && !validName ? "instructions" : "offscreen"}>
                             <FontAwesomeIcon icon={faInfoCircle} />
                             De 4 a 20 caracteres.<br />
-                            Debe comenzar letra primera letra mayúscula. <br />
+                            Debe contener al menos una letra mayúscula.<br />
                             Se permiten letras, números, guiones bajos y guiones.
                         </p>
 
@@ -140,13 +140,13 @@ const Register = () => {
                         <p id="pwdnote" className={pwdFocus && !validPwd ? "instructions" : "offscreen"}>
                             <FontAwesomeIcon icon={faInfoCircle} />
                             De 8 a 20 caracteres.<br />
-                            Debe incluir letras mayúsculas y minúsculas, un número y un carácter especial.<br />
+                            Se permiten letras, números, guiones bajos , guiones y caracter especial.<br />
                             Caracteres especiales permitidos: <span aria-label="exclamation mark">!</span> <span aria-label="at symbol">@</span> <span aria-label="hashtag">#</span> <span aria-label="dollar sign">$</span> <span aria-label="percent">%</span>
                         </p>
 
 
                         <label htmlFor="confirm_pwd">
-                            Confirmar Contraseña:
+                            Confire Contraseña:
                             <FontAwesomeIcon icon={faCheck} className={validMatch && matchPwd ? "valid" : "hide"} />
                             <FontAwesomeIcon icon={faTimes} className={validMatch || !matchPwd ? "hide" : "invalid"} />
                         </label>
@@ -166,12 +166,12 @@ const Register = () => {
                             Debe coincidir con el primer campo de entrada de contraseña.
                         </p>
 
-                        <button disabled={!validName || !validPwd || !validMatch ? true : false}>Registrarme</button>
+                        <button disabled={!validName || !validPwd || !validMatch ? true : false}>Sign Up</button>
                     </form>
                     <p>
-                    ¿Ya estas registrado?<br />
-                    <span className="line">
-                            <Link to="/">Iniciar sesión</Link>
+                        ¿Ya estas registrado?<br />
+                        <span className="line">
+                            <Link to="/">Inicio de sesión</Link>
                         </span>
                     </p>
                 </section>
